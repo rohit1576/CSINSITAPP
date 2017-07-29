@@ -1,0 +1,35 @@
+
+
+<%include partials/header.ejs%>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.css">
+
+<div class="ui main text container">
+    <div class="ui huge header">CSI NSIT Posts</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% for(var i=0;i<Post.length;i++){%>
+               
+            <div class="meta">
+               <span> <%= Post[i].created.toDateString()%></span>
+               <br>
+                Likecount - <%=Post[i].likecount%>
+                <br>
+                Sharecount - <%=Post[i].sharecount%>
+
+            </div>
+            <div class="description">
+                <%- Post[i].message %>
+
+            </div>
+            <div class="item">
+                
+            </div>
+            
+                      
+<%}%>
+        </div>
+    </div>
+</div>
+
+<%include partials/footer.ejs%>

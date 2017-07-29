@@ -1,0 +1,27 @@
+
+
+<% include partials/header %>
+    <link rel="stylesheet" type="text/css" href="/landing.css">
+
+    <div id="landing-header">
+ 		<h1>Welcome to CSI APP!</h1>
+ 		<% if(!currentUser){ %>
+		<a href="/login" class="btn btn-lg btn-default"><i class="fa fa-facebook-square" aria-hidden="true"></i>Login</a>
+
+		<% } else {%>
+		<a href="/show" class="btn btn-lg btn-success">View Posts</a>
+		
+
+		<% } %>
+
+    </div>
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<% include partials/footer %>

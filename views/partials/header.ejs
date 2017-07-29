@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>CSI Project</title>
+ 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	
+ 	
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+ </head>
+ <body>
+ 	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a class="navbar-brand active" href="/">CSI APP</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       
+        <li class=""><a href="#">About</a></li>
+        
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <%if(!currentUser){%>
+       
+        <li><a href="/login"><i class="fa fa-facebook-square" aria-hidden="true">
+</i>Login</a></li>
+        <%}else{%>
+        
+         <li><a href="#">Signed in as <%=currentUser.displayName%></a></li>
+         <li><a href="/logout">Logout</a></li>
+         <%}%>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+ 
+

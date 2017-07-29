@@ -1,0 +1,84 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+
+
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(http://www.nsit.ac.in/static/images/societies/CSI.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://i2.wp.com/csinsit.org/techbytes/wp-content/uploads/2015/10/technology.png?resize=750%2C410);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://i0.wp.com/csinsit.org/techbytes/wp-content/uploads/2015/10/code1.png?resize=750%2C410);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://storage.googleapis.com/ehimages/2017/3/31/img_cd347f26adc382e035dfba1d8e4108f0_1490952018051_original.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://i0.wp.com/csinsit.org/techbytes/wp-content/uploads/2015/09/TECHBYTES2.png?resize=750%2C410);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
