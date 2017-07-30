@@ -8,7 +8,10 @@ var app = express();
 
 
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost/csiproject",{useMongoClient: true});
+//mongoose.connect("mongodb://localhost/csiproject",{useMongoClient: true});
+
+mongoose.connect("mongodb://rohitsuri:password@ds129003.mlab.com:29003/csinsit",{useMongoClient: true});
+
 
 
 //USER AUTHENTICATION USING PASSPORT-FACEBOOK
