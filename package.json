@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node app.js"
   },
   "author": "rohit suri",
   "license": "ISC",
@@ -25,5 +25,15 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.0.0",
     "request": "^2.81.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohit1576/CSINSITAPP.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/rohit1576/CSINSITAPP/issues"
+  },
+  "homepage": "https://github.com/rohit1576/CSINSITAPP#readme"
 }
