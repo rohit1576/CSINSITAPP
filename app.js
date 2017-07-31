@@ -4,7 +4,7 @@ var Strategy = require('passport-facebook').Strategy;
 var FB = require('fbgraphapi');
 var request = require('request');
 var app = express();
-//var Post = require('./models/post.js');
+
 
 
 var mongoose = require('mongoose');
@@ -46,8 +46,6 @@ passport.deserializeUser(function(obj, cb) {
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
-// Use application-level middleware for common functionality, including
-// logging, parsing, and session handling.
 
 app.use(require('body-parser').urlencoded({ extended: true }));
 
@@ -81,12 +79,7 @@ app.get('/login/facebook/return',
     res.redirect('/');
   });
 
-/*app.get('/show',isLoggedIn,
-  require('connect-ensure-login').ensureLoggedIn(),
-  function(req, res){
-      
-    res.render('show', { user: req.user });
-  });*/
+
   
  app.get("/logout",function(req, res) {
 
@@ -112,22 +105,7 @@ res.locals.currentUser = req.user;
 next();
 });
     
-/*
-app.get("/show",isLoggedIn,function(req,res)
-{
-   
-   FB.api(
-  '/csinsit/posts',
-  'GET',
-  {},
-  function(response) {
-      console.log(response);
-  }
-);
-	res.render('show', { user: req.user });
-
-});
-*/
+/
 
 //POST SCHEMA TO STORE INFORMATION OF THE POST
 
