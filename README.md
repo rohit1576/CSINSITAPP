@@ -4,8 +4,11 @@ The app fetches all the posts from the facebook page of CSI-NSIT and displays th
 The above feature is implemented using Facebook Graph-API.
 
 Steps for running this web app:
+
     git clone <repo-url> this repo wherever you want
+    
     cd into this repo
+    
     npm install
     
     Note: The database is hosted on MongoLab, so no need to worry about that.
