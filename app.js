@@ -105,7 +105,6 @@ res.locals.currentUser = req.user;
 next();
 });
     
-/
 
 //POST SCHEMA TO STORE INFORMATION OF THE POST
 
