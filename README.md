@@ -9,8 +9,6 @@ Steps for running this web app:
     
     cd into this repo
     
-    npm install
-    
     Note: The database is hosted on MongoLab, so no need to worry about that.
     
     now run the server by $ node app.js
